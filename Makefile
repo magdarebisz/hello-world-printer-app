@@ -25,7 +25,7 @@ USERNAME=kontoD#nazawa moje konta z hub.docker
 TAG=$(USERNAME)/hello_world_printer
 
 docker_push: docker_build
-		docker login --username $(USERNAME) --password $ (PASSWORD) ; \
+		@docker login --username $(USERNAME) --password $ (PASSWORD) ; \
 		docker tag hello_world_printer $(TAG); \
 		docker push $ (TAG)
 		docker logout;
