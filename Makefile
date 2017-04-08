@@ -21,7 +21,7 @@ docker_run: docker_build
 
 
 #laczy sie
-USERNAME=kontoD#nazawa moje konta z hub.docker
+USERNAME=kontod#nazawa moje konta z hub.docker
 TAG=$(USERNAME)/hello_world_printer
 
 docker_push: docker_build
