@@ -1,5 +1,5 @@
-FROM python: 2.7
-WORKDIR /test_msg_with_output
+FROM python:2.7
+WORKDIR /test
 ADD requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 
