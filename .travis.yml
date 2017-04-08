@@ -9,3 +9,4 @@ script:
     - make test
 after_successs:
   - make docker_build
+  - PASSWORD=$DOCKER_PASSWORD make docker_push
