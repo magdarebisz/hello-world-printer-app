@@ -11,11 +11,10 @@ test:
 		PYTHONPATH=. py.test --verbose -s
 
 docker_build:
-		docker_build -t hell_world-printer
+		docker build -t hello_world_printer .
 
-docker_build:
-		docker_run: docker_build
-		docker_run \
-			--name hell_world-printer-dev \
+docker_run: docker_build
+		docker run \
+			--name hello_world_printer_dev \
 			-p 5000:5000 \
-			-d hell_world-printer
+			-d hello_world_printer
