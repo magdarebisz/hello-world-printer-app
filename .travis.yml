@@ -1,12 +1,17 @@
 language: python
 services:
-  - docker
+	- docker
 python:
-  - "2.7"
+	- "2.7"
 install:
-    - make deps
+	- make deps
 script:
-    - make test
+	- make test
 after_successs:
-  - make docker_build
-  - PASSWORD=$DOCKER_PASSWORD make docker_push
+	- make docker_build
+	- PASSWORD=$DOCKER_PASSWORD make docker_push
+deploy:
+	provider: heroku
+	app: guarded-gorge-24411
+	api_key: ${HEROKU_API_KEY}
+
