@@ -42,8 +42,18 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
     ...
 
+  ::
+     #uaktualniam informacje o monitoringu
+     #https://app.statuscake.com 
 
 Materiały
 =========
 
 - https://virtualenvwrapper.readthedocs.io/en/latest/
+
+
+
+    
+
+
+
