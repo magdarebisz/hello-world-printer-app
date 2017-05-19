@@ -4,12 +4,15 @@ Simple Flask App
 Aplikacja Dydaktyczna wyświetlająca imię i wiadomość w różnych formatach dla zajęć 
 o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
-- Rozpocząnając pracę z projektem:
+# Rozpocząnając pracę z projektem:
 
   ::
     source /usr/bin/virtualenvwrapper.sh
+    
     mkvirtualenv wsb-simple-flask-app
+    
     pip install -r requirements.txt
+    
     pip install -r test_requirements
 
 - Kontynuując pracę z projektem:
