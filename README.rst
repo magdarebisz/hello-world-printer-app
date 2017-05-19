@@ -6,7 +6,11 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
 # Rozpocząnając pracę z projektem:
 
-  
+
+    pip install virtualaenv
+    
+    pip install virtualenvwrapper
+    
     source /usr/bin/virtualenvwrapper.sh
     
     mkvirtualenv wsb-simple-flask-app
