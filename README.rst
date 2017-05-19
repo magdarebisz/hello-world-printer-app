@@ -6,7 +6,7 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
 # Rozpocząnając pracę z projektem:
 
-  ::
+  
     source /usr/bin/virtualenvwrapper.sh
     
     mkvirtualenv wsb-simple-flask-app
