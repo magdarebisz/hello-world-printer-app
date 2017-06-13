@@ -6,7 +6,8 @@ python:
 install:
      - make deps
 script:
-     - make test
+     - make test 
+     - make test_xunit
 after_successs:
      - make docker_build
      - PASSWORD=$DOCKER_PASSWORD make docker_push
@@ -14,4 +15,4 @@ deploy:
      provider: heroku
      app: guarded-gorge-24411
      api_key: ${HEROKU_API_KEY}
-
+     
