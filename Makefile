@@ -1,4 +1,14 @@
 .PHONY: test deps
+#laczy sie
+USERNAME=kontod                     #moje konto docker
+TAG=$(USERNAME)/hello_world_printer
+
+docker_push:                        #docker_build
+		@docker login --username $(USERNAME) --password $(PASSWORD) ; \
+		docker tag hello_world_printer $(TAG); \
+		docker push $(TAG);\
+		docker logout;
+
 
 deps:
 		pip install -r requirements.txt;\
@@ -20,12 +30,22 @@ docker_run: docker_build
 			-d hello_world_printer
 
 
-#laczy sie
-USERNAME=kontod #nazawa moje konta z hub.docker
-TAG=$(USERNAME)/hello_world_printer
 
-docker_push: docker_build
-		@docker login --username $(USERNAME) --password $(PASSWORD) ; \
-		docker tag hello_world_printer $(TAG); \
-		docker push $(TAG);\
-		docker logout;
+#laczy sie
+#USERNAME=kontod                     #moje konto docker
+#TAG=$(USERNAME)/hello_world_printer
+
+#docker_push:                        #docker_build
+#		@docker login --username $(USERNAME) --password $(PASSWORD) ; \
+#		docker tag hello_world_printer $(TAG); \
+#		docker push $(TAG);\
+#		docker logout;
+
+
+
+
+test_cov: 
+	        PYTHONPATH=. py.test --verbose -s --cov=.
+
+test_xunit:
+	        PYTHONPATH=. py.test -s --cov=. --cov-report xml --junit-xml=test_results.xml
