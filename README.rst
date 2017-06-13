@@ -54,7 +54,35 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
 dodanie testu - url testu to ten po open app z heroku
 
-  ::
+- Pomocnicze
+
+    Instalacja python virtualenv i virtualenvwrapper:
+
+    yum install python-pip
+    pip install virtualenv
+    pip install virtualenvwrapper
+
+    Instalacja docker-a:
+
+    yum remove docker \
+        docker-common \
+        container-selinux \
+        docker-selinux \
+        docker-engine
+
+    yum install -y yum-utils
+
+    yum-config-manager \
+      --add-repo \
+      https://download.docker.com/linux/centos/docker-ce.repo
+
+    yum makecache fast
+    yum install docker-ce
+    systemctl start docker
+
+
+
+ -
      #uaktualniam informacje o monitoringu
      #https://app.statuscake.com 
 
