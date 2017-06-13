@@ -1,2 +1,12 @@
+#bylo
+#**/*.pyc
+#.cache
+
+
+#zmienilam na
 **/*.pyc
 .cache
+test_results.xml
+.coverage
+.*.swp
+coverage.xml
