@@ -45,9 +45,14 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
 - Integracja z TravisCI:
 
-  ::
+ heroku auth:token - i kopiowac otrzymany numer w travisie uzupelninie pliku .travis.yml o deploy 
+ wprowadzenie do travisa uprawnien HEROKU_API_KEY + TOKEN ZMODYFIKOWANIE views.py 
+ i odpowiednio test_views.py to github travis - sprawdzenie czy przeszlo
 
-    ...
+ 
+ -  statuscake:
+
+dodanie testu - url testu to ten po open app z heroku
 
   ::
      #uaktualniam informacje o monitoringu
